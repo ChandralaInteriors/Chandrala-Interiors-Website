@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chandrala Interiors & Decorators</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KK4Z8RGL');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KK4Z8RGL"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="logo-container">
+      <img src="assets\logo.png" alt="Chandrala Interiors Logo">
+      <span>Chandrala Interiors</span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Elegant Spaces. Timeless Design.</h2>
+      <p>Transform your home into a luxurious sanctuary with Chandrala Interiors & Decorators. Personalized, sophisticated, and uniquely yours.</p>
+      <a href="#projects" class="btn">Explore Our Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          At <strong>Chandrala Interiors & Decorators</strong>, we transform living and working spaces into timeless masterpieces.
+          Blending modern aesthetics with personalized details, we believe that every space tells a story — and we make yours unforgettable.
+        </p>
+        <p>
+          From conceptual sketches to the final flourish, our designs prioritize comfort, elegance, and sustainability.
+          With a dedicated team and an eye for refinement, we craft interiors that reflect your unique lifestyle and taste.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="assets\colorful-pastel-minimal-interior-design.jpg" alt="Elegant interior space" />
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="projects-header">
+      <h2>Our Projects</h2>
+      <p>Take a glimpse at some of our favorite transformations — from refined living rooms to elegant commercial interiors.</p>
+    </div>
+    <div class="project-carousel-wrapper">
+      <button class="scroll-btn left">&lt;</button>
+      <div class="project-carousel" id="carousel">
+        <div class="project-card" data-folder="living-room">
+          <img src="assets/projects/living-room/img5.jpg" alt="Modern Living Room">
+          <h3>Modern Living Room</h3>
+        </div>
+        <div class="project-card" data-folder="Kitchen">
+          <img src="assets/DSC00975.JPG" alt="Kitchen Project">
+          <h3>Luxury Kitchen</h3>
+        </div>
+        <div class="project-card" data-folder="Wardrobe">
+          <img src="assets/projects/Wardrobe/DSC01010 (1).jpg" alt="Stylish Wardrobes">
+          <h3>Custom Wardrobes</h3>
+        </div>
+        <div class="project-card" data-folder="Office">
+          <img src="assets/DSC01029.JPG" alt="Office Project">
+          <h3>Contemporary Office</h3>
+        </div>
+        <div class="project-card" data-folder="Bedroom">
+          <img src="assets/DSC01033.JPG" alt="Bedroom Project">
+          <h3>Elegant Bedroom</h3>
+        </div>
+      </div>
+      <button class="scroll-btn right">&gt;</button>
+    </div>
+  </section>
+
+  <div id="gallery-modal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content" id="gallery-images"></div>
+  </div>
+
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <div class="contact-text">
+        <h2>Contact Us</h2>
+        <p>Have a project in mind or just want to say hello? We'd love to hear from you. Fill out the form and we'll get back to you soon!</p>
+      </div>
+
+      <form class="contact-form" id="contact-form">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div id="form-status"></div>
+    </div>
+  </section>
+
+
+
+  <section class="services" id="services">
+    <h2>What We Offer</h2>
+    <p>Designs that inspire. Solutions that deliver.</p>
+
+    <div class="service-grid">
+      <div class="service-card" data-aos="fade-up">
+        <i class="fas fa-couch"></i>
+        <h3>Modern Designs</h3>
+        <p>Elegantly minimalist interiors blending form and function.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-drafting-compass"></i>
+        <h3>Tailored Concepts</h3>
+        <p>Spaces crafted uniquely to your taste and lifestyle.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-leaf"></i>
+        <h3>Sustainable Spaces</h3>
+        <p>Eco-conscious design choices that care for the planet.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-hard-hat"></i>
+        <h3>Turnkey Execution</h3>
+        <p>From design to delivery, we manage every detail seamlessly.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3809.0764345261973!2d76.81683367498347!3d17.311860883562463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc8bf431cfe2ced%3A0xe452d8aea64c7ed2!2sChandrala%20Interiors%20%26%20Decorators!5e0!3m2!1sen!2sin!4v1752328694014!5m2!1sen!2sin"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <footer>
+    <div class="left">
+      <p>&copy; 2025 Chandrala Interiors</p>
+    </div>
+    <div class="right">
+      <p>Follow us:
+        <a href="https://www.instagram.com/chandrala_interiors?igsh=MTg4OGh2OTZ0YWZ1MA==" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i> @chandrala_interiors
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+</body>
+</html>
