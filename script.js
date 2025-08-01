@@ -1,26 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contact-form");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const formData = new URLSearchParams(new FormData(form));
-
-    try {
-      await fetch("https://script.google.com/macros/s/AKfycbyupGMGKjfAP2-N8MBtlnZ46rZ5YVlm4Bx5grIkjtFTy11Zs92XljIWQoK6HxlH0SqD/exec", {
-        method: "POST",
-        mode: "no-cors", // for local testing if using HTTP
-        body: formData
-      });
-      document.getElementById("form-status").innerText = "Message sent, thanks!";
-      form.reset();
-    } catch (err) {
-      console.error(err);
-      document.getElementById("form-status").innerText = "Error sending. Try again.";
-    }
-  });
-});
-
 const galleryImages = {
   "living-room": ["img1.webp", "img2.webp", "img3.webp", "img4.webp", "img5.webp", "img6.webp", "img7.webp", "img8.webp",
      "img9.webp", "img10.webp", "img11.webp", "img12.webp", "img13.webp", "img14.webp"],
@@ -32,16 +9,33 @@ const galleryImages = {
   "Bedroom": ["DSC00988.webp", "DSC00993 (1).webp", "DSC01003.webp", "DSC01022.webp", "DSC01060.webp", "IMG-20250729-WA0025.webp"]
 };
   
+document.addEventListener("DOMContentLoaded", () => {
+  // Contact form
+  const form = document.getElementById("contact-form");
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new URLSearchParams(new FormData(form));
+      try {
+        await fetch("", {
+          method: "POST",
+          mode: "no-cors",
+          body: formData
+        });
+        document.getElementById("form-status").innerText = "Message sent, thanks!";
+        form.reset();
+      } catch (err) {
+        console.error(err);
+        document.getElementById("form-status").innerText = "Error sending. Try again.";
+      }
+    });
+  }
 
-document.addEventListener("DOMContentLoaded", function () {
-
+  // Gallery viewer
   document.querySelectorAll(".project-card").forEach(card => {
     const folder = card.dataset.folder;
     if (!folder) return;
-
-    card.addEventListener("click", () => {
-      openGallery(folder);
-    });
+    card.addEventListener("click", () => openGallery(folder));
   });
 
   function openGallery(folder) {
@@ -69,28 +63,27 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".modal .close").addEventListener("click", () => {
     document.getElementById("gallery-modal").style.display = "none";
   });
-});
 
-document.querySelector(".scroll-btn.left").addEventListener("click", () => {
-  document.getElementById("carousel").scrollBy({ left: -300, behavior: 'smooth' });
-});
+  // Carousel scroll buttons
+  document.querySelector(".scroll-btn.left").addEventListener("click", () => {
+    document.getElementById("carousel").scrollBy({ left: -300, behavior: 'smooth' });
+  });
 
-document.querySelector(".scroll-btn.right").addEventListener("click", () => {
-  document.getElementById("carousel").scrollBy({ left: 300, behavior: 'smooth' });
-});
+  document.querySelector(".scroll-btn.right").addEventListener("click", () => {
+    document.getElementById("carousel").scrollBy({ left: 300, behavior: 'smooth' });
+  });
 
-const hamburger = document.getElementById('hamburger');
-const nav = document.querySelector('nav');
-
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('active');
-});
-
-// Close the menu when a link is clicked 
-nav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    if (window.innerWidth <= 768) {
-      nav.classList.remove('active');
-    }
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.querySelector('nav');
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        nav.classList.remove('active');
+      }
+    });
   });
 });
