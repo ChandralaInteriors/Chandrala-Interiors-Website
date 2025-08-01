@@ -85,3 +85,12 @@ const nav = document.querySelector('nav');
 hamburger.addEventListener('click', () => {
   nav.classList.toggle('active');
 });
+
+// Close the menu when a link is clicked 
+nav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      nav.classList.remove('active');
+    }
+  });
+});
