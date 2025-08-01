@@ -201,6 +201,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   margin: 40px 0;
+  overflow: hidden;
 }
 
 .project-carousel {
@@ -256,6 +257,15 @@ nav a:hover {
   border-radius: 50%;
   z-index: 2;
   position: absolute;
+  top: 50%; 
+  transform: translateY(-50%); 
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-btn.disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .scroll-btn.left {
@@ -394,16 +404,19 @@ footer {
   padding: 30px 60px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 footer .left, footer .right {
   margin: 10px 0;
+  font-size: 16px;
 }
 
 footer a {
   color: #c7a17a;
   text-decoration: none;
+  margin-left: 8px;
 }
 
 .modal {
@@ -534,5 +547,20 @@ footer a {
 
   .map-container iframe {
     height: 250px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .left, footer .right {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  footer .right {
+    justify-content: center;
   }
 }
