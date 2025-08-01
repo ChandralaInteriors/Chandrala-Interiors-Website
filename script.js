@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const formData = new URLSearchParams(new FormData(form));
       try {
-        await fetch("", {
+        await fetch("https://script.google.com/macros/s/AKfycbyupGMGKjfAP2-N8MBtlnZ46rZ5YVlm4Bx5grIkjtFTy11Zs92XljIWQoK6HxlH0SqD/exec", {
           method: "POST",
           mode: "no-cors",
           body: formData
