@@ -78,3 +78,10 @@ document.querySelector(".scroll-btn.left").addEventListener("click", () => {
 document.querySelector(".scroll-btn.right").addEventListener("click", () => {
   document.getElementById("carousel").scrollBy({ left: 300, behavior: 'smooth' });
 });
+
+const hamburger = document.getElementById('hamburger');
+const nav = document.querySelector('nav');
+
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});
