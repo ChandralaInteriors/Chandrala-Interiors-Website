@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const galleryImages = {
-  "living-room": ["img1.JPG", "img2.JPG", "img3.JPG", "img4.JPG", "img5.JPG", "img6.jpg", "img7.jpg", "img8.jpg",
-     "img9.jpg", "img10.jpg", "img11.jpg", "img12.jpg", "img13.jpg", "img14.jpg"],
-  "Kitchen": ["DSC00974 (1).JPG", "DSC00980.JPG", "DSC00983.JPG", "DSC01056 (1).JPG", "IMG-20250729-WA0005.jpg"],
-  "Wardrobe": ["DSC01002 (1).JPG", "DSC01010 (1).JPG", "DSC01028 (1).JPG", "DSC01064.JPG", "IMG-20250729-WA0006.jpg", 
-    "IMG-20250729-WA0007.jpg", "IMG-20250729-WA0009.jpg", "IMG-20250729-WA0011.jpg", "IMG-20250729-WA0016.jpg", 
-    "IMG-20250729-WA0019.jpg", "IMG-20250729-WA0021.jpg", "IMG-20250729-WA0023.jpg", "DSC00827.JPG", "DSC00834.JPG"],
+  "living-room": ["img1.webp", "img2.webp", "img3.webp", "img4.webp", "img5.webp", "img6.webp", "img7.webp", "img8.webp",
+     "img9.webp", "img10.webp", "img11.webp", "img12.webp", "img13.webp", "img14.webp"],
+  "Kitchen": ["DSC00974 (1).webp", "DSC00980.webp", "DSC00983.webp", "DSC01056 (1).webp", "IMG-20250729-WA0005.webp"],
+  "Wardrobe": ["DSC01002 (1).webp", "DSC01010 (1).webp", "DSC01028 (1).webp", "DSC01064.webp", "IMG-20250729-WA0006.webp", 
+    "IMG-20250729-WA0007.webp", "IMG-20250729-WA0009.webp", "IMG-20250729-WA0011.webp", "IMG-20250729-WA0016.webp", 
+    "IMG-20250729-WA0019.webp", "IMG-20250729-WA0021.webp", "IMG-20250729-WA0023.webp", "DSC00827.webp", "DSC00834.webp"],
   "Office": [""],
-  "Bedroom": ["DSC00988.JPG", "DSC00993 (1).JPG", "DSC01003.JPG", "DSC01022.JPG", "DSC01060.JPG", "IMG-20250729-WA0025.jpg"]
+  "Bedroom": ["DSC00988.webp", "DSC00993 (1).webp", "DSC01003.webp", "DSC01022.webp", "DSC01060.webp", "IMG-20250729-WA0025.webp"]
 };
   
 
