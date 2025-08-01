@@ -464,14 +464,34 @@ footer a {
   }
   .hamburger {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; 
+    gap: 5px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    border-radius: 2px;
   }
 
   nav {
+    position: absolute;
+    top: 80px; 
+    left: 0;
+    right: 0;
+    background: #fff;
     display: none;
     flex-direction: column;
-    width: 100%;
-    background-color: white;
-    padding: 10px 0;
+    align-items: center; 
+    gap: 15px;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
   }
 
   nav.active {
